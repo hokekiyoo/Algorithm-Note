@@ -19,3 +19,5 @@
 |unionfind|UnionFind木|データ構造の一種。グループの結合、同一グループかの判断が高速|
 |binarysearch|二部探索|`O(log(N))`で動作。自作とbisect利用版|
 |shakutori|しゃくとり法|単調性があるものに対し`O(N)`で動作。|
+|bipartite_judge|二部グラフ判定|二部グラフに帰着させると色々楽なので。判定用のもの|
+|bipartite_matchning|最大二部マッチング|増大路を利用。`O(V(V+E)`で動作(多分)|
