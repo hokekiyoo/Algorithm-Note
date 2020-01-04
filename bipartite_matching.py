@@ -14,7 +14,9 @@
 辿っていって増大路(左右共に新しい未マッチング頂点があるか)
 
 """
+import sys
 from collections import defaultdict
+sys.setrecursionlimit(10**7)
 
 def dfs(v, visited):
     """

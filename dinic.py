@@ -58,16 +58,16 @@ class Dinic:
         :param t: bfsの終点(sink)
         :return: tに到達したかどうか。(sourceからの距離を保存しながら)
         """
-        self.level = level = [-1]*len(self.G)
+        self.level = level = defaultdict(int)
         q = deque([s])
-        level[s] = 0
+        level[s] = 1
         G = self.G
         while len(q) > 0:
             v = q.popleft()
             lv = level[v] + 1
             nexts = G[v]
             for w, cap, _ in nexts:
-                if cap > 0 and level[w] == -1:
+                if cap > 0 and level[w] == 0:
                     level[w] = lv
                     q.append(w)
         is_reach = (level[t] > 0)
