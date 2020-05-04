@@ -23,4 +23,6 @@
 |bipartite_judge|二部グラフ判定|二部グラフに帰着させると色々楽なので。判定用のもの。dfsで実装|
 |bipartite_matchning|最大二部マッチング|増大路を利用。`O(V(V+E))`で動作(多分)|
 |dinic|最大フロー|ディニック法を用いて、最大フローを出す。`O(VE^2)`で動作|
-|segmented_tree|セグメント木|区間クエリをさばく。モノイドならOK更新、計算ともに`O(log(N))`で動作|
+|segment_tree|セグメント木|区間クエリをさばく。モノイドならOK。更新、計算ともに`O(log(N))`|
+|lca|LCA|木上で最長共通祖先を見つける。(EulerTour+SegTree)。**バグありそう**|
+|fenwick_tree|BIT|配列のupdate(add)と部分和をlog(N)で求める。更新と二部探索に強い。|
