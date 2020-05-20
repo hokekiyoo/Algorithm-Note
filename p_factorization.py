@@ -7,8 +7,6 @@
 def getprime(n):
     if not isinstance(n, int):
         raise TypeError("Input int")
-    if n < 2:
-        raise ValueError("N >= 2")
     prime = []
     # 約数はsqrt(N)まで調べればOK
     data = [i+1 for i in range(1,n)]
@@ -22,7 +20,12 @@ def getprime(n):
 
 from collections import defaultdict
 def factorization(n):
+    # n >= 1を想定
     factors = defaultdict(int)
+    if n == 1:
+        return {}
+    if int(n**0.5) == 1:
+        return {n:1} 
     primes = getprime(int(n**0.5))
     for prime in primes:
         while n % prime == 0:
