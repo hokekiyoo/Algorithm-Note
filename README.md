@@ -26,3 +26,4 @@
 |segment_tree|セグメント木|区間クエリをさばく。モノイドならOK。更新、計算ともに`O(log(N))`|
 |lca|LCA|木上で最長共通祖先を見つける。(EulerTour+SegTree)。**バグありそう**|
 |fenwick_tree|BIT|配列のupdate(add)と部分和をlog(N)で求める。更新と二部探索に強い。|
+|erasable_pq|heap_q|eraseできるpriority queue、heapqを2回使う|
