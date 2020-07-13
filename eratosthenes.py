@@ -16,14 +16,16 @@
 def getprime(n):
     if not isinstance(n, int):
         raise TypeError("Input int")
-    if n < 2:
-        raise ValueError("N >= 2")
+    if n == 1:
+        return -1
+    if n == 2:
+        return [2]
     prime = []
     # 約数はsqrt(N)まで調べればOK
     data = [i+1 for i in range(1,n)]
     while True:
         p = data[0]
-        if p >= int(n**0.5):
+        if p >= int(n**0.5)+1:
             return prime+data
         prime.append(p)
         # pで割り切れないものだけを残す
